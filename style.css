@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "Karla";
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --clr-primary-200: hsl(148, 38%, 91%);
+    --clr-primary-600: hsl(169, 82%, 27%);
+    --clr-primary-700: hsl(0, 66%, 54%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-500: hsl(186, 15%, 59%);
+    --clr-neutral-900: hsl(187, 24%, 22%);
+
+    --f-family: "Karla", sans-serif;
+
+    --fs-200: 0.875rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+svg,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: var(--f-family);
+}
+
+
+.wrapper {
+    --max-width: 738px;
+    --horizontal-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--horizontal-padding)*2));
+    margin-inline: auto;
+}
+
+
+.text-light {
+    color: var(--clr-neutral-100);
+}
+
+.text-semi-light {
+    color: var(--clr-neutral-500);
+}
+
+.text-dark {
+    color: var(--clr-neutral-900)
+}
+
+.text-accent {
+    color: var(--clr-primary-700);
+}
+
+
+.bg-light {
+    background-color: var(--clr-primary-200);
+}
+
+.bg-dark {
+    background-color: var(--clr-neutral-900);
+}
+
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+
+.grid {
+    display: grid;
+}
